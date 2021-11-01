@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="test1">
+    <!--sql语句必须写在相应的标签当中-->
+    <select id="s1" parameterType="java.lang.String" resultType="com.bjpowernode.domain.Student" >
+        select * from tbl_student where id = #{id}
+    </select>
+    <select id="s2" parameterType="java.lang.String" resultType="com.bjpowernode.domain.Student">
+        select * from tbl_student
+    </select>
+    <insert id="s3" parameterType="java.lang.String">
+        insert into tbl_student (id,name,age) values ("A0007","XZ",29)
+    </insert>
+    <delete id="s4" parameterType="java.lang.String">
+        delete  from tbl_student where id="A0006" ;
+    </delete>
+</mapper>
